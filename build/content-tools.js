@@ -5394,7 +5394,7 @@
   ContentTools = {
     Tools: {},
     CANCEL_MESSAGE: 'Your changes have not been saved, do you really want to lose them?'.trim(),
-    DEFAULT_TOOLS: [['bold', 'italic', 'link', 'align-left', 'align-center', 'align-right'], ['heading', 'subheading', 'paragraph', 'unordered-list', 'ordered-list', 'table', 'indent', 'unindent', 'line-break'], ['image', 'video', 'preformatted'], ['undo', 'redo', 'remove']],
+    DEFAULT_TOOLS: [['bold', 'italic', 'link', 'align-left', 'align-center', 'align-right'], ['heading', 'h2', 'h3', 'paragraph', 'unordered-list', 'ordered-list', 'table', 'indent', 'unindent', 'line-break'], ['image', 'video', 'preformatted'], ['undo', 'redo', 'remove']],
     DEFAULT_VIDEO_HEIGHT: 300,
     DEFAULT_VIDEO_WIDTH: 400,
     HIGHLIGHT_HOLD_DURATION: 2000,
@@ -9335,22 +9335,41 @@
 
   })(ContentTools.Tool);
 
-  ContentTools.Tools.Subheading = (function(_super) {
-    __extends(Subheading, _super);
+  ContentTools.Tools.H2 = (function(_super) {
+    __extends(H2, _super);
 
-    function Subheading() {
-      return Subheading.__super__.constructor.apply(this, arguments);
+    function H2() {
+      return H2.__super__.constructor.apply(this, arguments);
     }
 
-    ContentTools.ToolShelf.stow(Subheading, 'subheading');
+    ContentTools.ToolShelf.stow(H2, 'h2');
 
-    Subheading.label = 'Subheading';
+    H2.label = 'H2';
 
-    Subheading.icon = 'subheading';
+    H2.icon = 'h2';
 
-    Subheading.tagName = 'h2';
+    H2.tagName = 'h2';
 
-    return Subheading;
+    return H2;
+
+  })(ContentTools.Tools.Heading);
+
+  ContentTools.Tools.H3 = (function(_super) {
+    __extends(H3, _super);
+
+    function H3() {
+      return H3.__super__.constructor.apply(this, arguments);
+    }
+
+    ContentTools.ToolShelf.stow(H3, 'h3');
+
+    H3.label = 'H3';
+
+    H3.icon = 'h3';
+
+    H3.tagName = 'h3';
+
+    return H3;
 
   })(ContentTools.Tools.Heading);
 

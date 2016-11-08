@@ -480,15 +480,25 @@ class ContentTools.Tools.Heading extends ContentTools.Tool
         callback(true)
 
 
-class ContentTools.Tools.Subheading extends ContentTools.Tools.Heading
+class ContentTools.Tools.H2 extends ContentTools.Tools.Heading
 
-    # Convert the current text block to a subheading (e.g <h2>foo</h2>)
+    # Convert the current text block to a h2 (e.g <h2>foo</h2>)
 
-    ContentTools.ToolShelf.stow(@, 'subheading')
+    ContentTools.ToolShelf.stow(@, 'h2')
 
-    @label = 'Subheading'
-    @icon = 'subheading'
+    @label = 'H2'
+    @icon = 'h2'
     @tagName = 'h2'
+
+class ContentTools.Tools.H3 extends ContentTools.Tools.Heading
+
+    # Convert the current text block to a h3 (e.g <h3>foo</h3>)
+
+    ContentTools.ToolShelf.stow(@, 'h3')
+
+    @label = 'H3'
+    @icon = 'h3'
+    @tagName = 'h3'
 
 
 class ContentTools.Tools.Paragraph extends ContentTools.Tools.Heading

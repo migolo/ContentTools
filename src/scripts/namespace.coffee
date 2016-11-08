@@ -22,7 +22,8 @@ ContentTools =
             'align-right'
         ], [
             'heading',
-            'subheading',
+            'h2',
+            'h3',
             'paragraph',
             'unordered-list',
             'ordered-list',

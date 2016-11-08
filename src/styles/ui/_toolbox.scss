@@ -163,8 +163,9 @@
          * alphabetically).
          */
         &--bold:before           { content: "\ea62"; }
-        &--heading:before        { content: "H"    ; font-weight: bold; }
-        &--subheading:before     { content: "H"    ; }
+        &--heading:before        { content: "H1"    ; font-weight: bold; }
+        &--h2:before             { content: "H2"    ; }
+        &--h3:before             { content: "H3"    ; }
         &--paragraph:before      { content: "P"    ; }
         &--preformatted:before   { content: "\ea80"; }
         &--italic:before         { content: "\ea64"; }
