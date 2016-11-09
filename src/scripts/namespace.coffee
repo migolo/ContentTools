@@ -28,6 +28,8 @@ ContentTools =
             'h2',
             'h3',
             'paragraph',
+            'blockquote',
+            'preformatted',
             'unordered-list',
             'ordered-list',
             'table',
@@ -36,8 +38,7 @@ ContentTools =
             'line-break'
         ], [
             'image',
-            'video',
-            'preformatted'
+            'video'
         ], [
             'undo',
             'redo',

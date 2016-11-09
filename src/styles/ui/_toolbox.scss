@@ -170,6 +170,7 @@
         &--h3:before             { content: "H3"    ; font-weight: 500; font-size: 15px;}
         &--paragraph:before      { content: "P"    ; }
         &--preformatted:before   { content: "\ea80"; }
+        &--blockquote:before     { content: "\e977"; }
         &--italic:before         { content: "\ea64"; }
         &--link:before           { content: "\e9cb"; }
         &--align-left:before     { content: "\ea77"; }

@@ -5394,7 +5394,7 @@
   ContentTools = {
     Tools: {},
     CANCEL_MESSAGE: 'Your changes have not been saved, do you really want to lose them?'.trim(),
-    DEFAULT_TOOLS: [['bold', 'italic', 'underline', 'strike', 'link', 'align-left', 'align-center', 'align-right', 'align-justify'], ['heading', 'h2', 'h3', 'paragraph', 'unordered-list', 'ordered-list', 'table', 'indent', 'unindent', 'line-break'], ['image', 'video', 'preformatted'], ['undo', 'redo', 'remove']],
+    DEFAULT_TOOLS: [['bold', 'italic', 'underline', 'strike', 'link', 'align-left', 'align-center', 'align-right', 'align-justify'], ['heading', 'h2', 'h3', 'paragraph', 'blockquote', 'preformatted', 'unordered-list', 'ordered-list', 'table', 'indent', 'unindent', 'line-break'], ['image', 'video'], ['undo', 'redo', 'remove']],
     DEFAULT_VIDEO_HEIGHT: 300,
     DEFAULT_VIDEO_WIDTH: 400,
     HIGHLIGHT_HOLD_DURATION: 2000,
@@ -9408,6 +9408,25 @@
     H3.tagName = 'h3';
 
     return H3;
+
+  })(ContentTools.Tools.Heading);
+
+  ContentTools.Tools.BlockQuote = (function(_super) {
+    __extends(BlockQuote, _super);
+
+    function BlockQuote() {
+      return BlockQuote.__super__.constructor.apply(this, arguments);
+    }
+
+    ContentTools.ToolShelf.stow(BlockQuote, 'blockquote');
+
+    BlockQuote.label = 'BlockQuote';
+
+    BlockQuote.icon = 'blockquote';
+
+    BlockQuote.tagName = 'blockquote';
+
+    return BlockQuote;
 
   })(ContentTools.Tools.Heading);
 

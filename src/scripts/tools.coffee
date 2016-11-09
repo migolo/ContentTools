@@ -520,6 +520,16 @@ class ContentTools.Tools.H3 extends ContentTools.Tools.Heading
     @icon = 'h3'
     @tagName = 'h3'
 
+class ContentTools.Tools.BlockQuote extends ContentTools.Tools.Heading
+
+    # Convert the current text block to a h3 (e.g <blockquote>foo</blockquote>)
+
+    ContentTools.ToolShelf.stow(@, 'blockquote')
+
+    @label = 'BlockQuote'
+    @icon = 'blockquote'
+    @tagName = 'blockquote'
+
 
 class ContentTools.Tools.Paragraph extends ContentTools.Tools.Heading
 
