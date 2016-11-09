@@ -5394,7 +5394,7 @@
   ContentTools = {
     Tools: {},
     CANCEL_MESSAGE: 'Your changes have not been saved, do you really want to lose them?'.trim(),
-    DEFAULT_TOOLS: [['bold', 'italic', 'link', 'align-left', 'align-center', 'align-right'], ['heading', 'h2', 'h3', 'paragraph', 'unordered-list', 'ordered-list', 'table', 'indent', 'unindent', 'line-break'], ['image', 'video', 'preformatted'], ['undo', 'redo', 'remove']],
+    DEFAULT_TOOLS: [['bold', 'italic', 'link', 'align-left', 'align-center', 'align-right', 'align-justify'], ['heading', 'h2', 'h3', 'paragraph', 'unordered-list', 'ordered-list', 'table', 'indent', 'unindent', 'line-break'], ['image', 'video', 'preformatted'], ['undo', 'redo', 'remove']],
     DEFAULT_VIDEO_HEIGHT: 300,
     DEFAULT_VIDEO_WIDTH: 400,
     HIGHLIGHT_HOLD_DURATION: 2000,
@@ -9570,6 +9570,25 @@
     AlignRight.className = 'text-right';
 
     return AlignRight;
+
+  })(ContentTools.Tools.AlignLeft);
+
+  ContentTools.Tools.AlignJustify = (function(_super) {
+    __extends(AlignJustify, _super);
+
+    function AlignJustify() {
+      return AlignJustify.__super__.constructor.apply(this, arguments);
+    }
+
+    ContentTools.ToolShelf.stow(AlignJustify, 'align-justify');
+
+    AlignJustify.label = 'Align justify';
+
+    AlignJustify.icon = 'align-justify';
+
+    AlignJustify.className = 'text-justify';
+
+    return AlignJustify;
 
   })(ContentTools.Tools.AlignLeft);
 

@@ -19,7 +19,8 @@ ContentTools =
             'link',
             'align-left',
             'align-center',
-            'align-right'
+            'align-right',
+            'align-justify'
         ], [
             'heading',
             'h2',

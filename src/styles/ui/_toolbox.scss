@@ -163,9 +163,9 @@
          * alphabetically).
          */
         &--bold:before           { content: "\ea62"; }
-        &--heading:before        { content: "H1"    ; font-weight: bold; }
-        &--h2:before             { content: "H2"    ; }
-        &--h3:before             { content: "H3"    ; }
+        &--heading:before        { content: "H1"    ; font-weight: 700; font-size: 16px;}
+        &--h2:before             { content: "H2"    ; font-weight: 600; font-size: 16px;}
+        &--h3:before             { content: "H3"    ; font-weight: 500; font-size: 15px;}
         &--paragraph:before      { content: "P"    ; }
         &--preformatted:before   { content: "\ea80"; }
         &--italic:before         { content: "\ea64"; }
@@ -173,6 +173,7 @@
         &--align-left:before     { content: "\ea77"; }
         &--align-center:before   { content: "\ea78"; }
         &--align-right:before    { content: "\ea79"; }
+        &--align-justify:before  { content: "\ea7a"; }
         &--unordered-list:before { content: "\e9ba"; }
         &--ordered-list:before   { content: "\e9b9"; }
         &--table:before          { content: "\ea71"; }

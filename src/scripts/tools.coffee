@@ -701,6 +701,15 @@ class ContentTools.Tools.AlignRight extends ContentTools.Tools.AlignLeft
     @icon = 'align-right'
     @className = 'text-right'
 
+class ContentTools.Tools.AlignJustify extends ContentTools.Tools.AlignLeft
+
+    # Apply a class to right align the contents of the current text block.
+
+    ContentTools.ToolShelf.stow(@, 'align-justify')
+
+    @label = 'Align justify'
+    @icon = 'align-justify'
+    @className = 'text-justify'
 
 class ContentTools.Tools.UnorderedList extends ContentTools.Tool
 
