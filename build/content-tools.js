@@ -9007,7 +9007,7 @@
 
     Bold.icon = 'bold';
 
-    Bold.tagName = 'b';
+    Bold.tagName = 'strong';
 
     Bold.canApply = function(element, selection) {
       if (!element.content) {
@@ -9070,7 +9070,7 @@
 
     Italic.icon = 'italic';
 
-    Italic.tagName = 'i';
+    Italic.tagName = 'em';
 
     return Italic;
 
@@ -9208,7 +9208,7 @@
         detail = ev.detail();
         applied = true;
         if (element.type() === 'Image') {
-          alignmentClassNames = ['align-center', 'align-left', 'align-right'];
+          alignmentClassNames = ['align-center', 'align-left', 'align-right', 'align-justify'];
           if (detail.href) {
             element.a = {
               href: detail.href
@@ -9516,7 +9516,7 @@
       if ((_ref = element.type()) === 'ListItemText' || _ref === 'TableCellText') {
         element = element.parent();
       }
-      alignmentClassNames = [ContentTools.Tools.AlignLeft.className, ContentTools.Tools.AlignCenter.className, ContentTools.Tools.AlignRight.className];
+      alignmentClassNames = [ContentTools.Tools.AlignLeft.className, ContentTools.Tools.AlignCenter.className, ContentTools.Tools.AlignRight.className, ContentTools.Tools.AlignJustify.className];
       for (_i = 0, _len = alignmentClassNames.length; _i < _len; _i++) {
         className = alignmentClassNames[_i];
         if (element.hasCSSClass(className)) {

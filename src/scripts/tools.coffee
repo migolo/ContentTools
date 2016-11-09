@@ -90,7 +90,7 @@ class ContentTools.Tools.Bold extends ContentTools.Tool
 
     @label = 'Bold'
     @icon = 'bold'
-    @tagName = 'b'
+    @tagName = 'strong'
 
     @canApply: (element, selection) ->
         # Return true if the tool can be applied to the current
@@ -161,7 +161,7 @@ class ContentTools.Tools.Italic extends ContentTools.Tools.Bold
 
     @label = 'Italic'
     @icon = 'italic'
-    @tagName = 'i'
+    @tagName = 'em'
 
 
 class ContentTools.Tools.Link extends ContentTools.Tools.Bold
@@ -340,7 +340,8 @@ class ContentTools.Tools.Link extends ContentTools.Tools.Bold
                 alignmentClassNames = [
                     'align-center',
                     'align-left',
-                    'align-right'
+                    'align-right',
+                    'align-justify'
                     ]
 
                 if detail.href
@@ -660,7 +661,8 @@ class ContentTools.Tools.AlignLeft extends ContentTools.Tool
         alignmentClassNames = [
             ContentTools.Tools.AlignLeft.className,
             ContentTools.Tools.AlignCenter.className,
-            ContentTools.Tools.AlignRight.className
+            ContentTools.Tools.AlignRight.className,
+            ContentTools.Tools.AlignJustify.className
             ]
         for className in alignmentClassNames
             if element.hasCSSClass(className)
