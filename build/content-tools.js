@@ -5394,7 +5394,7 @@
   ContentTools = {
     Tools: {},
     CANCEL_MESSAGE: 'Your changes have not been saved, do you really want to lose them?'.trim(),
-    DEFAULT_TOOLS: [['bold', 'italic', 'link', 'align-left', 'align-center', 'align-right', 'align-justify'], ['heading', 'h2', 'h3', 'paragraph', 'unordered-list', 'ordered-list', 'table', 'indent', 'unindent', 'line-break'], ['image', 'video', 'preformatted'], ['undo', 'redo', 'remove']],
+    DEFAULT_TOOLS: [['bold', 'italic', 'underline', 'strike', 'link', 'align-left', 'align-center', 'align-right', 'align-justify'], ['heading', 'h2', 'h3', 'paragraph', 'unordered-list', 'ordered-list', 'table', 'indent', 'unindent', 'line-break'], ['image', 'video', 'preformatted'], ['undo', 'redo', 'remove']],
     DEFAULT_VIDEO_HEIGHT: 300,
     DEFAULT_VIDEO_WIDTH: 400,
     HIGHLIGHT_HOLD_DURATION: 2000,
@@ -9073,6 +9073,44 @@
     Italic.tagName = 'em';
 
     return Italic;
+
+  })(ContentTools.Tools.Bold);
+
+  ContentTools.Tools.Underline = (function(_super) {
+    __extends(Underline, _super);
+
+    function Underline() {
+      return Underline.__super__.constructor.apply(this, arguments);
+    }
+
+    ContentTools.ToolShelf.stow(Underline, 'underline');
+
+    Underline.label = 'Underline';
+
+    Underline.icon = 'underline';
+
+    Underline.tagName = 'u';
+
+    return Underline;
+
+  })(ContentTools.Tools.Bold);
+
+  ContentTools.Tools.Strike = (function(_super) {
+    __extends(Strike, _super);
+
+    function Strike() {
+      return Strike.__super__.constructor.apply(this, arguments);
+    }
+
+    ContentTools.ToolShelf.stow(Strike, 'strike');
+
+    Strike.label = 'Strike';
+
+    Strike.icon = 'strike';
+
+    Strike.tagName = 's';
+
+    return Strike;
 
   })(ContentTools.Tools.Bold);
 

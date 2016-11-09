@@ -163,6 +163,25 @@ class ContentTools.Tools.Italic extends ContentTools.Tools.Bold
     @icon = 'italic'
     @tagName = 'em'
 
+class ContentTools.Tools.Underline extends ContentTools.Tools.Bold
+
+    # Make the current selection of text (non)italic (e.g <u>foo</u>).
+
+    ContentTools.ToolShelf.stow(@, 'underline')
+
+    @label = 'Underline'
+    @icon = 'underline'
+    @tagName = 'u'
+
+class ContentTools.Tools.Strike extends ContentTools.Tools.Bold
+
+    # Make the current selection of text (non)italic (e.g <s>foo</s>).
+
+    ContentTools.ToolShelf.stow(@, 'strike')
+
+    @label = 'Strike'
+    @icon = 'strike'
+    @tagName = 's'
 
 class ContentTools.Tools.Link extends ContentTools.Tools.Bold
 

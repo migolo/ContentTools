@@ -16,6 +16,8 @@ ContentTools =
         [
             'bold',
             'italic',
+            'underline',
+            'strike',
             'link',
             'align-left',
             'align-center',

@@ -163,6 +163,8 @@
          * alphabetically).
          */
         &--bold:before           { content: "\ea62"; }
+        &--underline:before      { content: "\ea63"; }
+        &--strike:before         { content: "\ea65"; }
         &--heading:before        { content: "H1"    ; font-weight: 700; font-size: 16px;}
         &--h2:before             { content: "H2"    ; font-weight: 600; font-size: 16px;}
         &--h3:before             { content: "H3"    ; font-weight: 500; font-size: 15px;}
